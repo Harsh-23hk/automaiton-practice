@@ -7,6 +7,9 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
+import org.example.payload.pojos.Auth;
+import org.example.payload.pojos.Bookingdates;
+import org.example.payload.pojos.Bookings;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
@@ -68,25 +71,31 @@ public class AddUpdateBooking {
         booking.setBookingdates(bookingdates);
         booking.setAdditionalneeds("Breakfast");
 
+        RequestSpecification requestSpecification;
+        ValidatableResponse validatableResponse;
+        Response response;
+        String token;
+        Integer bookingid;
+
 
         String createBookings = gson.toJson(booking);
 
 
-        RequestSpecification requestSpecification = RestAssured.given();
+         requestSpecification = RestAssured.given();
         requestSpecification.baseUri("https://restful-booker.herokuapp.com/");
 
 
-        //create token
-        requestSpecification.basePath("/auth");
-        requestSpecification.contentType(ContentType.JSON);
-        requestSpecification.body(auth);
+
+            requestSpecification.basePath("/auth");
+            requestSpecification.contentType(ContentType.JSON);
+            requestSpecification.body(auth);
 
 
-        Response response = requestSpecification.when().post();
-        ValidatableResponse validatableResponse = response.then().log().all();
-        validatableResponse.statusCode(200);
+            response = requestSpecification.when().post();
+            validatableResponse = response.then().log().all();
+            validatableResponse.statusCode(200);
 
-        String token = response.then().extract().path("token");
+             token = response.then().extract().path("token");
 
 
         //post
@@ -95,7 +104,7 @@ public class AddUpdateBooking {
         requestSpecification.body(createBookings);
 
         response = requestSpecification.post();
-        Integer bookingid = response.then().extract().path("bookingid");
+        bookingid = response.then().extract().path("bookingid");
         validatableResponse = response.then().log().all();
 
         //#TC 1

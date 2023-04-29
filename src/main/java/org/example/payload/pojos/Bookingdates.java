@@ -1,4 +1,4 @@
-package restassured.crud;
+package org.example.payload.pojos;
 
 public class Bookingdates {
     private String checkin;

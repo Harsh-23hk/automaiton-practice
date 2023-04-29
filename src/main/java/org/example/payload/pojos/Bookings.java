@@ -1,4 +1,6 @@
-package restassured.crud;
+package org.example.payload.pojos;
+
+import org.example.payload.pojos.Bookingdates;
 
 public class Bookings {
 
