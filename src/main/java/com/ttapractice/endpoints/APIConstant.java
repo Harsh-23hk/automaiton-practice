@@ -1,4 +1,4 @@
-package org.example.payload.pojos;
+package com.ttapractice.payload.pojos;
 
 public class APIConstant {
     public final static String BASE_URL = "https://restful-booker.herokuapp.com";

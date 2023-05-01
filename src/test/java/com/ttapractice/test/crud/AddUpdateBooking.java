@@ -7,9 +7,9 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import org.example.payload.pojos.Auth;
-import org.example.payload.pojos.Bookingdates;
-import org.example.payload.pojos.Bookings;
+import com.ttapractice.payload.pojos.Auth;
+import com.ttapractice.payload.pojos.Bookingdates;
+import com.ttapractice.payload.pojos.Bookings;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
