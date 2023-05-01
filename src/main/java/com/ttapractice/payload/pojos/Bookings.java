@@ -1,6 +1,4 @@
-package org.example.payload.pojos;
-
-import org.example.payload.pojos.Bookingdates;
+package com.ttapractice.payload.pojos;
 
 public class Bookings {
 

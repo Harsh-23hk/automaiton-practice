@@ -1,4 +1,4 @@
-package org.example.payload.pojos;
+package com.ttapractice.payload.pojos;
 
 public class Bookingdates {
     private String checkin;

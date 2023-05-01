@@ -1,4 +1,4 @@
-package restassured.crud;
+package com.ttapractice.test.crud;
 
 
 import com.google.gson.Gson;
