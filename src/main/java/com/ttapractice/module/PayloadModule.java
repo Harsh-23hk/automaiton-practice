@@ -25,5 +25,25 @@ public class PayloadModule {
         return payload;
     }
 
+    public String updatePayload() throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        Bookings booking = new Bookings();
+        booking.setFirstname("Golu");
+        booking.setLastname("Khanna");
+        booking.setTotalprice(2598);
+        booking.setDepositpaid(true);
+        Bookingdates bookingdates = new Bookingdates();
+        bookingdates.setCheckin("2023-05-01");
+        bookingdates.setCheckout("2023-05-02");
+        booking.setBookingdates(bookingdates);
+        booking.setAdditionalneeds("Breakfast");
+
+        String payload = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(booking);
+
+        return payload;
+    }
+
+
+
 
 }
