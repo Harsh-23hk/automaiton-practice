@@ -3,8 +3,6 @@ package com.ttapractice.base;
 import com.ttapractice.endpoints.APIConstant;
 import com.ttapractice.module.AuthModule;
 import com.ttapractice.module.PayloadModule;
-import com.ttapractice.payload.pojos.Bookingdates;
-import com.ttapractice.payload.pojos.Bookings;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
