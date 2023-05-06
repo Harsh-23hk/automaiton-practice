@@ -1,4 +1,4 @@
-package com.ttapractice.test.crud;
+package com.ttapractice.test.Integration;
 
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
@@ -14,7 +14,7 @@ import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class CreateDelete {
+public class Integration02 {
     RequestSpecification requestSpecification;
     ValidatableResponse validatableResponse;
     Response response;

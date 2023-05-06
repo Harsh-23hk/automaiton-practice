@@ -1,4 +1,4 @@
-package com.ttapractice.test.crud;
+package com.ttapractice.test.Integration;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.ttapractice.base.BaseAction;
@@ -7,7 +7,7 @@ import io.restassured.RestAssured;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
-public class CreateDeleteGet extends BaseAction {
+public class Integration01 extends BaseAction {
 
     String TOKEN;
     Integer BOOKING_ID;

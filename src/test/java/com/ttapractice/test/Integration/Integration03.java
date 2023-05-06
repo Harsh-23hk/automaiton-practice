@@ -1,4 +1,4 @@
-package com.ttapractice.test.crud;
+package com.ttapractice.test.Integration;
 
 
 import com.google.gson.Gson;
@@ -14,7 +14,7 @@ import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 
-public class AddUpdateBooking {
+public class Integration03 {
 
 
     //baseurl =https://restful-booker.herokuapp.com

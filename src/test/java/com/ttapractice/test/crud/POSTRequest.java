@@ -8,12 +8,13 @@ import io.restassured.path.json.JsonPath;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class POSTRequest extends BaseAction {
 
 
-    @Test
+   /* @Test
     public void getToken(ITestContext iTestContext) throws JsonProcessingException {
         requestSpecification.basePath(APIConstant.BASE_AUTH_URL);
         response = RestAssured.given().spec(requestSpecification).body(authModule.createAuthLoad()).when().post();
@@ -29,9 +30,9 @@ public class POSTRequest extends BaseAction {
         iTestContext.setAttribute("token", jsonPath.get("token"));
 
 
-    }
+    }*/
 
-    @Test(dependsOnMethods= {"getToken"})
+    @Test
     public void postRequest(ITestContext iTestContext) throws JsonProcessingException {
         requestSpecification.basePath(APIConstant.CREATE_GET_POST_URL_BOOKING);
         String TOKEN = (String) iTestContext.getAttribute("token");

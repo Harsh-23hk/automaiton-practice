@@ -10,23 +10,7 @@ import org.testng.annotations.Test;
 
 public class PUTRequest extends BaseAction {
 
-    @Test
-    public void getToken(ITestContext iTestContext) throws JsonProcessingException {
-        requestSpecification.basePath(APIConstant.BASE_AUTH_URL);
-        response = RestAssured.given().spec(requestSpecification).body(authModule.createAuthLoad()).when().post();
-        validatableResponse = response.then().log().all();
 
-        validatableResponse.statusCode(200);
-
-        validatableResponse.body("token.length()", Matchers.is(15));
-
-        validatableResponse.body("token", Matchers.notNullValue());
-
-        String TOKEN = response.then().extract().path("token");
-        iTestContext.setAttribute("token", TOKEN);
-
-
-    }
 
     @Test(priority = 1)
     public void postRequest(ITestContext iTestContext) throws JsonProcessingException {
@@ -45,7 +29,6 @@ public class PUTRequest extends BaseAction {
 
 
     }
-
 
     @Test(priority = 2)
     public void putRequest(ITestContext iTestContext) throws JsonProcessingException {
